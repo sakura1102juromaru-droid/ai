@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【先着30名限定】1日30分から始める安心のAI副業・AIツール相談</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Sans JP & Shippori Mincho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Shippori Mincho', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0b132b',      /* 引き締まった信頼感を与えるネイビー */
+                            deepBlue: '#1c2541',  /* 深みのあるブルー */
+                            accentBlue: '#3a506b',/* 落ち着きのあるスレートブルー */
+                            gold: '#b89420',      /* 白背景でも視認性の良い深めのシャンパンゴールド */
+                            orange: '#f26419',    /* 活動的で温かみのある茜色オレンジ */
+                            orangeHover: '#dd4b00',
+                            yellow: '#f6bd60',    /* 親しみやすさと輝きを示すイエロー */
+                            cyan: '#00b4d8',      /* アップロード画像にマッチするネオンシアン */
+                            lightBg: '#f8f9fa'    /* 目の疲れない柔らかいライトグレー */
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 15px 35px -10px rgba(11, 19, 43, 0.08)',
+                        'cyber-glow': '0 10px 30px -5px rgba(0, 180, 216, 0.15)', /* シアンの光彩シャドウ */
+                        'gold-glow': '0 4px 14px rgba(184, 148, 32, 0.15)',
+                        'orange-glow': '0 10px 25px rgba(242, 100, 25, 0.3)',
+                        'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ボタンの脈動アニメーション */
+        .glow-button {
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 10px 25px rgba(242, 100, 25, 0.35);
+            }
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 10px 30px 15px rgba(242, 100, 25, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 25px rgba(242, 100, 25, 0.35);
+            }
+        }
+        
+        /* 本（電子書籍）の立体風3Dスタイル */
+        .book-container {
+            perspective: 1000px;
+        }
+        .book-mockup {
+            transform: rotateY(-15deg) rotateX(10deg);
+            transform-style: preserve-3d;
+            box-shadow: -6px 8px 16px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+        .book-mockup:hover {
+            transform: rotateY(-5deg) rotateX(5deg);
+        }
+
+        /* ネオン光ファイバー風の装飾線 */
+        .cyber-line {
+            background: linear-gradient(90deg, transparent, #00b4d8, #f26419, transparent);
+            height: 2px;
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white leading-relaxed overflow-x-hidden">
+
+    <!-- ヘッダー -->
+    <header class="bg-white/95 text-brand-navy py-3.5 px-4 sticky top-0 z-50 shadow-sm border-b border-slate-200 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2.5">
+                <span class="bg-brand-orange text-white text-[10px] md:text-xs font-black px-2.5 py-1 rounded-full uppercase tracking-wider">シニア安心設計</span>
+                <span class="font-bold text-base md:text-xl tracking-wider font-serif text-brand-navy">AI副業個別相談</span>
+            </div>
+            <div>
+                <a href="#cta-form" class="bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs md:text-sm py-2 px-4 rounded-lg transition-all shadow-sm">
+                    <i class="fa-solid fa-calendar-check mr-1.5"></i>無料相談に申し込む
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ファーストビュー (FV) -->
+    <section class="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 pt-12 pb-20 px-4 overflow-hidden border-b border-slate-100">
+        <!-- アップロード画像と同期したサイバーグリッド装飾背景 -->
+        <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#00b4d8_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-orange/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="relative max-w-5xl mx-auto z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- FV 左側：テキストコピー領域 -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <!-- キャッチコピー上の小さな帯 -->
+                <p class="inline-flex items-center bg-cyan-50 border border-brand-cyan/30 text-brand-accentBlue font-bold text-sm px-4 py-1.5 rounded-full shadow-cyber-glow">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-2 text-brand-cyan animate-spin" style="animation-duration: 3s"></i> 先着30名様限定！残枠あとわずか
+                </p>
+                
+                <!-- メメインキャッチコピー -->
+                <h1 class="font-serif font-black text-3xl md:text-5xl leading-tight md:leading-snug tracking-wide text-brand-navy">
+                    「パソコンが苦手」<br class="md:hidden">「何から始めれば…」<br>
+                    そんな<span class="text-brand-orange underline decoration-brand-cyan decoration-4 decoration-skip-ink-none">65才以上のあなた</span>へ！<br>
+                    たった<span class="text-brand-orange text-4xl md:text-6xl font-black inline-block px-1 my-1">1日30分</span>の新習慣で<br>
+                    初月から「第2の安心年金」を作る方法
+                </h1>
+                
+                <!-- サブキャッチコピー -->
+                <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    難しい英語やプログラミングは一切不要。プロが隣でサポートするような「マンツーマン個別添削」がついているから、挫折のしようがありません。
+                </p>
+                
+                <!-- 実績・強みバッジ (白地にオレンジのフレームで目立たせる) -->
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+                    <div class="bg-white p-3 rounded-xl shadow-premium border border-slate-100 border-b-4 border-b-brand-orange flex flex-col justify-center items-center">
+                        <i class="fa-solid fa-hourglass-half text-brand-orange text-lg mb-1 animate-pulse"></i>
+                        <p class="text-[10px] text-slate-500 font-bold">難易度</p>
+                        <p class="text-xs md:text-sm font-black text-brand-navy">1日30分だけ</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl shadow-premium border border-slate-100 border-b-4 border-b-brand-cyan flex flex-col justify-center items-center">
+                        <i class="fa-solid fa-users-gear text-brand-cyan text-lg mb-1"></i>
+                        <p class="text-[10px] text-slate-500 font-bold">サポート</p>
+                        <p class="text-xs md:text-sm font-black text-brand-navy">プロの添削付</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl shadow-premium border border-slate-100 border-b-4 border-b-brand-gold flex flex-col justify-center items-center">
+                        <i class="fa-solid fa-sack-dollar text-brand-gold text-lg mb-1"></i>
+                        <p class="text-[10px] text-slate-500 font-bold">実績</p>
+                        <p class="text-xs md:text-sm font-black text-brand-navy">初月収益多数</p>
+                    </div>
+                </div>
+
+                <!-- CTAボタン -->
+                <div class="pt-2">
+                    <a href="#cta-form" class="glow-button inline-block w-full sm:w-auto bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-lg md:text-xl py-4.5 px-8 rounded-2xl shadow-orange-glow transition-all border-b-4 border-orange-800 text-center">
+                        <i class="fa-solid fa-circle-chevron-right mr-2"></i> 今すぐ特別価格で申し込む
+                    </a>
+                    <p class="text-xs text-slate-500 mt-3"><i class="fa-solid fa-shield-halved mr-1 text-slate-400"></i> 強引な勧誘は一切ありません。安心してご参加ください。</p>
+                </div>
+            </div>
+            
+            <!-- FV 右側：ビジュアルエリア (ユーザー様アップロード画像をメインビジュアルとして配置) -->
+            <div class="lg:col-span-5 flex flex-col justify-center relative">
+                <!-- 画像表示用のリッチな装飾カードフレーム -->
+                <div class="relative w-full max-w-[440px] mx-auto rounded-3xl bg-white p-3.5 border border-slate-200/80 shadow-premium flex flex-col overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/5 rounded-full blur-2xl"></div>
+                    
+                    <!-- デバイス風モックアップのヘッダー -->
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3">
+                        <div class="flex items-center space-x-1.5">
+                            <span class="w-2.5 h-2.5 bg-red-400 rounded-full"></span>
+                            <span class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></span>
+                            <span class="w-2.5 h-2.5 bg-green-400 rounded-full"></span>
+                        </div>
+                        <span class="text-[10px] text-brand-cyan font-bold uppercase tracking-wider"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i>最先端のAI生成システム</span>
+                    </div>
+
+                    <!-- メインイメージ（アップロード画像） -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-inner-soft border border-slate-200 aspect-[16/9] bg-slate-900 group">
+                        <img src="Gemini_Generated_Image_9gk3i19gk3i19gk3.png" 
+                             alt="AIロボットが高度なグラフィックを生成・操作している未来のイメージ" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-95">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <p class="absolute bottom-2.5 left-3 text-[11px] text-white font-bold flex items-center">
+                            <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-ping mr-2"></span>
+                            最先端AIが、文字の指示だけで画像や文章を瞬時に生み出す！
+                        </p>
+                    </div>
+
+                    <!-- シニアへの橋渡し説明文 -->
+                    <div class="mt-3.5 bg-slate-50 p-3 rounded-xl border border-slate-200/60 text-left">
+                        <p class="text-xs text-slate-700 leading-relaxed">
+                            <i class="fa-solid fa-comment-dots text-brand-cyan mr-1"></i>
+                            <strong>「こんな難しい画面、私に触れるの？」</strong>と思った方もご安心ください！あなたが操作するのは、いつもの簡単な日本語の入力画面（スマホやPC）だけ。裏側でこの超強力なAIが、あなたの代わりに仕事を一瞬で終わらせてくれます。
+                        </p>
+                    </div>
+                    
+                    <!-- 成果（報酬）バッジ -->
+                    <div class="mt-2.5 bg-emerald-50 border border-emerald-200 p-2.5 rounded-xl flex items-center justify-between text-xs">
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-emerald-500 text-white rounded-full w-5 h-5 flex items-center justify-center font-bold text-[10px]">¥</div>
+                            <span class="text-emerald-800 font-bold">60代未経験者の実績多数</span>
+                        </div>
+                        <span class="text-emerald-600 font-extrabold">初月で報酬発生！</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 【NEW: 実際の活用イメージ】身近に感じてもらうための自然な女性AI活用シーン -->
+    <section class="py-12 px-4 bg-gradient-to-r from-cyan-50/40 to-orange-50/30 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <!-- 左側：自然にAIを活用する女性の美しいSVGイラスト -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-[280px] bg-white p-4 rounded-3xl shadow-premium border border-slate-150 overflow-hidden text-center">
+                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-cyan/5 rounded-full blur-xl"></div>
+                    <!-- 自宅のソファでリラックスしながら笑顔でスマートフォン（AI）を操作する穏やかな女性のイラスト -->
+                    <svg viewBox="0 0 120 120" class="w-full h-auto text-brand-navy">
+                        <!-- ソファと背景の温かみ -->
+                        <path d="M10 90 C 10 75, 110 75, 110 90" fill="none" stroke="#f6bd60" stroke-width="4" stroke-linecap="round" />
+                        <circle cx="60" cy="50" r="32" fill="#e0f7fa" opacity="0.5" />
+                        <!-- 女性のシルエット（上品な髪型、おだやかな笑顔） -->
+                        <!-- 髪型（後ろにまとめたシニヨンスタイル） -->
+                        <circle cx="72" cy="40" r="8" fill="#3a506b" />
+                        <path d="M50 32 C 50 20, 75 20, 75 32 C 75 45, 50 45, 50 32 Z" fill="#3a506b" />
+                        <!-- 顔 -->
+                        <circle cx="60" cy="38" r="11" fill="#ffedd5" />
+                        <path d="M58 35 C 58 35, 60 37, 62 35" stroke="#3a506b" stroke-width="1.5" stroke-linecap="round" fill="none" /> <!-- 目 -->
+                        <path d="M58 43 C 58 45, 62 45, 62 43" stroke="#f26419" stroke-width="1.5" stroke-linecap="round" fill="none" /> <!-- 口（笑顔） -->
+                        <!-- 洋服・上半身（リラックスしたVネック） -->
+                        <path d="M40 70 C 40 50, 80 50, 80 70 Z" fill="#f26419" opacity="0.8" />
+                        <!-- 手とスマートフォン -->
+                        <path d="M45 68 Q 60 62 65 65" stroke="#ffedd5" stroke-width="4.5" stroke-linecap="round" fill="none" />
+                        <!-- スマホ画面から優しく広がるAIのキラキラ光線 -->
+                        <rect x="62" y="55" width="8" height="14" rx="2" fill="#1c2541" transform="rotate(15, 66, 62)" />
+                        <rect x="64" y="57" width="4" height="10" rx="1" fill="#00b4d8" transform="rotate(15, 66, 62)" />
+                        <!-- キラキラ（AIの知性）の輝き -->
+                        <path d="M82 30 L 86 30 M 84 28 L 84 32" stroke="#00b4d8" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M42 42 L 46 42 M 44 40 L 44 44" stroke="#f26419" stroke-width="1.5" stroke-linecap="round" />
+                        <!-- お茶のカップ -->
+                        <path d="M32 62 C 32 58, 38 58, 38 62 Z" fill="none" stroke="#b89420" stroke-width="2" />
+                        <rect x="30" y="62" width="10" height="8" rx="1" fill="#e2e8f0" />
+                    </svg>
+                    <p class="text-[10px] text-slate-400 font-bold mt-2"><i class="fa-solid fa-mug-hot text-brand-orange mr-1"></i>自宅でお茶を飲みながら</p>
+                </div>
+            </div>
+            
+            <!-- 右側：日常的なAIの優しさを伝えるテキスト -->
+            <div class="md:col-span-7 space-y-4 text-center md:text-left">
+                <span class="inline-block bg-brand-cyan/10 text-brand-accentBlue text-xs font-black px-3 py-1 rounded-full"><i class="fa-solid fa-house-chimney mr-1"></i>リビングが最高の仕事場に</span>
+                <h3 class="font-serif text-xl md:text-2xl font-black text-brand-navy">
+                    いつもの暮らしに、そっと溶け込む。<br>
+                    驚くほどおだやかで優しい「AI活用ライフ」
+                </h3>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto md:mx-0">
+                    AIと聞くと、SF映画のようなロボットや暗い画面をカチカチ叩く姿を想像しませんか？<br>
+                    <strong>実際は全く違います。</strong>あなたがやるのは、まるで親しい友人や家族に「これ教えて」「ちょっと手伝って」とスマートフォンでLINEを送るような、おだやかで楽しいやり取りだけ。その簡単さに、皆さん驚かれます。
+                </p>
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start pt-1 text-slate-700 text-xs font-bold">
+                    <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-brand-cyan mr-1"></i>立ち上がる必要なし</span>
+                    <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-brand-cyan mr-1"></i>座椅子やベッドの上でも</span>
+                    <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200"><i class="fa-solid fa-check text-brand-cyan mr-1"></i>音声入力なら話すだけでOK</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. 【Problem：問題】 -->
+    <section class="py-16 px-4 bg-orange-50/30 border-b border-slate-100 relative">
+        <!-- 茜色オレンジからネオンシアンへと繋がる光のライン -->
+        <div class="absolute top-0 left-0 right-0 cyber-line"></div>
+        
+        <div class="max-w-3xl mx-auto">
+            <span class="block text-center text-brand-orange font-extrabold text-sm tracking-wider uppercase mb-2">こんな壁にぶつかっていませんか？</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-center text-brand-navy mb-8 leading-snug">
+                これからの暮らしを豊かにしたいけれど、<br class="hidden sm:inline">
+                「自分には無理」と立ち止まっていませんか？
+            </h2>
+            
+            <!-- 悩みのチェックリスト -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-premium space-y-6 border border-slate-100">
+                <!-- 悩み1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-red-50 text-red-500 rounded-full p-2.5 mt-0.5 shrink-0 flex items-center justify-center w-10 h-10 border border-red-100">
+                        <i class="fa-solid fa-triangle-exclamation text-base"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-slate-900">定年後、自由な時間はあるのに「お金の不安」がずっと消えない</h3>
+                        <p class="text-xs md:text-sm text-slate-600 mt-1">物価の上昇や、年金だけでは少し心細いと感じる日々。自分自身の力で、毎月数万円でも「自由に使えるお金」を作りたいのに方法がわからない。</p>
+                    </div>
+                </div>
+                
+                <hr class="border-slate-100">
+
+                <!-- 悩み2 -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-cyan-50 text-brand-cyan rounded-full p-2.5 mt-0.5 shrink-0 flex items-center justify-center w-10 h-10 border border-cyan-100">
+                        <i class="fa-solid fa-laptop-slash text-base"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-slate-900">「AIで副業」というニュースを見るが、専門用語ばかりで難しそう</h3>
+                        <p class="text-xs md:text-sm text-slate-600 mt-1">プログラミングや英語など、カタカナだらけの言葉を見ると頭が痛くなる。パソコン操作も得意ではなく、自分には別世界の話だと諦めている。</p>
+                    </div>
+                </div>
+
+                <hr class="border-slate-100">
+
+                <!-- 悩み3 -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-red-50 text-red-500 rounded-full p-2.5 mt-0.5 shrink-0 flex items-center justify-center w-10 h-10 border border-red-100">
+                        <i class="fa-solid fa-clock-rotate-left text-base"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-slate-900">家事や日々の趣味、地域の集まりでまとまった時間がとれない</h3>
+                        <p class="text-xs md:text-sm text-slate-600 mt-1">毎日何時間も机に向かって勉強する気力や体力は残っていない。1日30分程度、自分の好きな時間に少しずつ進められたらいいのに……。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- イラスト画像：AIのイメージにマッチした、テクノロジーに囲まれるシニアの不安を解決する図解 -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center bg-white p-5 rounded-2xl border border-slate-200/60 shadow-premium space-y-4 sm:space-y-0 sm:space-x-5">
+                <div class="w-20 h-20 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-400 relative overflow-hidden">
+                    <!-- AIの光に包まれるシニアを抽象表現した高品質インラインSVG -->
+                    <svg viewBox="0 0 100 100" class="w-12 h-12 text-brand-cyan">
+                        <circle cx="50" cy="40" r="18" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="2 2" />
+                        <path d="M25 80 C 25 65, 75 65, 75 80" fill="none" stroke="currentColor" stroke-width="4" />
+                        <circle cx="50" cy="40" r="8" fill="none" stroke="#f26419" stroke-width="3" />
+                        <path d="M15 30 L 30 15 M 85 30 L 70 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <!-- ホログラム風の光のドット -->
+                    <div class="absolute bottom-1 right-2 w-2 h-2 bg-brand-orange rounded-full animate-ping"></div>
+                </div>
+                <div class="text-center sm:text-left">
+                    <p class="text-sm md:text-base text-slate-800 font-bold leading-relaxed">
+                        「そうそう、AIって便利そうだけど一人じゃ何から手をつけていいか…」
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-500 mt-1">
+                        そう思われた方も大丈夫です。次は、同じ悩みを克服した先輩たちの話を聞いてください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 【Affinity：親近感・共感】 -->
+    <section class="py-16 px-4 bg-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="block text-center text-slate-500 font-extrabold text-sm tracking-wider uppercase mb-2">ご安心ください。あなただけではありません。</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-center text-brand-navy mb-12 leading-snug">
+                「パソコンを触るのも怖かった私たちができた！」<br>
+                受講生の方々のビフォーアフター
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 共感メッセージカード1 (シアン調和) -->
+                <div class="bg-slate-50/50 p-6 rounded-2xl border border-slate-200/80 shadow-premium flex flex-col justify-between hover:border-brand-cyan/40 transition-all duration-300">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-cyan bg-slate-100 flex items-center justify-center">
+                                <!-- ホログラム・デジタルアイコン -->
+                                <svg viewBox="0 0 100 100" class="w-8 h-8 text-brand-cyan">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3" />
+                                    <path d="M30 40 L 45 55 L 75 25" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="50" cy="50" r="20" fill="none" stroke="#f26419" stroke-width="2" stroke-dasharray="4 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-bold text-slate-900 text-base">M.K様（68歳・元会社員）</span>
+                                <span class="block text-xs text-brand-cyan font-bold"><i class="fa-solid fa-circle-check mr-1"></i>スマホからAIツールを起動</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-base text-brand-navy mb-2">「1日30分の新習慣で、孫へのお小遣いを稼げました」</h4>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                            「退職してから、ただテレビを眺める日々に焦りを感じていました。AIなど別世界のものだと思っていましたが、あの画像にあるような先進システムを、いつもの文字打ち感覚で使えると教わって驚しました。今では毎日30分の作業がとても楽しみです。」
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex justify-between items-center">
+                        <span class="text-[11px] text-slate-400">※個人の感想であり効果を保証するものではありません</span>
+                        <span class="bg-cyan-50 text-brand-cyan text-[10px] font-black px-2.5 py-1 rounded">初月成果発生</span>
+                    </div>
+                </div>
+
+                <!-- 共感メッセージカード2 (オレンジ・女性AI活用グラフィックに完全リニューアル！) -->
+                <div class="bg-slate-50/50 p-6 rounded-2xl border border-slate-200/80 shadow-premium flex flex-col justify-between hover:border-brand-orange/40 transition-all duration-300">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <!-- タブレットと笑顔の女性がデジタル空間で優しく調和する美しいインラインSVGアイコン -->
+                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-orange bg-white flex items-center justify-center p-1 shadow-sm">
+                                <svg viewBox="0 0 100 100" class="w-full h-auto text-brand-orange">
+                                    <!-- 女性の優しい顔シルエット -->
+                                    <circle cx="50" cy="38" r="16" fill="#ffe4e6" />
+                                    <!-- 優しい髪型 -->
+                                    <path d="M30 38 C 30 22, 70 22, 70 38 C 70 48, 30 48, 30 38 Z" fill="#475569" />
+                                    <!-- 笑顔の表情 -->
+                                    <path d="M46 36 Q 50 39 54 36" stroke="#475569" stroke-width="2" stroke-linecap="round" fill="none" />
+                                    <path d="M45 46 Q 50 50 55 46" stroke="#f26419" stroke-width="2" stroke-linecap="round" fill="none" />
+                                    <!-- タブレットから広がるAIのキラキラ光の輪 -->
+                                    <circle cx="50" cy="50" r="38" fill="none" stroke="#00b4d8" stroke-width="2" stroke-dasharray="3 3" opacity="0.6" />
+                                    <path d="M35 70 L 65 70" stroke="#f26419" stroke-width="4" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-bold text-slate-900 text-base">T.S様（65歳・主婦）</span>
+                                <span class="block text-xs text-brand-orange font-bold"><i class="fa-solid fa-circle-check mr-1"></i>タブレットを笑顔で操作</span>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-base text-brand-navy mb-2">「マンツーマン添削が、一番の安心材料でした」</h4>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                            「本を読んでも一人では絶対に挫折していたと思います。このサービスは、タブレットで打ったおしゃべりのような指示（言葉）をプロが直接手直しして、丁寧に添削してくれたのが、私のような初心者には最高の安心材料でした。」
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-200/60 flex justify-between items-center">
+                        <span class="text-[11px] text-slate-400">※個人の感想であり効果を保証するものではありません</span>
+                        <span class="bg-orange-50 text-brand-orange text-[10px] font-black px-2.5 py-1 rounded">未経験から開始</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 共感を誘う文章 -->
+            <div class="mt-12 text-slate-700 space-y-4 text-sm md:text-base border-l-4 border-brand-cyan pl-5">
+                <p class="font-bold text-brand-navy text-lg">
+                    なぜ、今までの「副業」や「AIの勉強」は難しかったのでしょうか？
+                </p>
+                <p>
+                    それは、あなたの能力のせいではありません。既存の本や教材が、若い人向けや、すでにパソコンが得意な人向けに作られているからです。
+                </p>
+                <p>
+                    あなたがこれまでに培ってきた「豊かな人生経験」や「相手を思いやる丁寧な言葉づかい」こそ、AIに的確な指示を出すための<strong>最大の強み</strong>になります。あなたに必要なのは、難しい英語ではなく、<strong>「シニアの視点に完全に合わせた優しい手順」</strong>だけだったのです。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 【Solution：解決策】 -->
+    <section class="py-16 px-4 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
+        <!-- アップロード画像の背景のように広がる、光の波紋を表現した装飾サークル -->
+        <div class="absolute -right-32 -top-32 w-80 h-80 bg-brand-cyan/5 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -left-32 -bottom-32 w-80 h-80 bg-brand-orange/5 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="block text-center text-brand-cyan font-extrabold text-sm tracking-wider uppercase mb-2"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> 解決策はここにあります</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-black text-center text-brand-navy mb-4 leading-tight">
+                シニア専用：AIツール個別相談
+            </h2>
+            <p class="text-center text-slate-600 text-sm md:text-base max-w-lg mx-auto mb-16 leading-relaxed">
+                あなたの理解度に完全に寄り添い、第2の安心収入への道筋をマンツーマンで組み立てる特別プログラム
+            </p>
+
+            <h3 class="text-center font-bold text-lg md:text-2xl text-brand-orange mb-10">
+                迷わず進める、挫折しない<br class="md:hidden">「3つの強力なベネフィット」
+            </h3>
+
+            <!-- 3つのベネフィットカード (白背景+ソフトシャドウ、サイバー要素のアイコン) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 強み1 (女性の活用イメージを追加して親しみやすく) -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-premium text-center flex flex-col justify-between hover:border-brand-cyan hover:shadow-cyber-glow transition-all duration-300">
+                    <div>
+                        <!-- スマホを操作する女性の顔のラインと優しく調和するSVG時計・AIアイコン -->
+                        <div class="w-16 h-16 rounded-full bg-cyan-50/80 flex items-center justify-center mx-auto mb-4 text-brand-cyan shadow-sm relative">
+                            <svg viewBox="0 0 100 100" class="w-10 h-10">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" />
+                                <path d="M50 20 L 50 50 L 70 50" fill="none" stroke="#f26419" stroke-width="4" stroke-linecap="round" />
+                                <circle cx="50" cy="50" r="4" fill="currentColor" />
+                                <!-- スマホを楽しむ優しい笑顔のラインを暗示 -->
+                                <path d="M35 30 Q 30 40 40 45" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" />
+                            </svg>
+                            <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-brand-orange rounded-full animate-ping"></span>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-navy mb-2">1日わずか30分で完結</h4>
+                        <p class="text-[11px] text-brand-gold font-bold mb-3">体力的にも無理なく習慣化</p>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-left">
+                            難しい長時間の講義はありません。一歩一歩が短く整理されているため、毎日のお茶の時間のついでにサクッと進められます。
+                        </p>
+                    </div>
+                    <!-- 特長を示すミニ図 -->
+                    <div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-center space-x-1.5 text-[10px] text-slate-400">
+                        <i class="fa-solid fa-bolt text-brand-cyan"></i>
+                        <span>隙間時間を活用したスマートロードマップ</span>
+                    </div>
+                </div>
+
+                <!-- 強み2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-premium text-center flex flex-col justify-between hover:border-brand-orange hover:shadow-orange-glow transition-all duration-300">
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-orange-50/80 flex items-center justify-center mx-auto mb-4 text-brand-orange shadow-sm relative">
+                            <svg viewBox="0 0 100 100" class="w-10 h-10 text-brand-orange">
+                                <circle cx="35" cy="40" r="12" fill="none" stroke="currentColor" stroke-width="4" />
+                                <circle cx="65" cy="40" r="12" fill="none" stroke="#00b4d8" stroke-width="4" />
+                                <path d="M20 75 C 20 60, 50 60, 50 75" fill="none" stroke="currentColor" stroke-width="4" />
+                                <path d="M50 75 C 50 60, 80 60, 80 75" fill="none" stroke="#00b4d8" stroke-width="4" />
+                                <line x1="45" y1="40" x2="55" y2="40" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-navy mb-2">専属のマンツーマン添削</h4>
+                        <p class="text-[11px] text-brand-gold font-bold mb-3">あなただけの家庭教師のように</p>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-left">
+                            「これで大丈夫？」という不安を一蹴します。あなたが実際に試した操作や指示の出し方を、プロが直接添削して優しく解説。
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-center space-x-1.5 text-[10px] text-slate-400">
+                        <i class="fa-solid fa-circle-nodes text-brand-orange"></i>
+                        <span>疑問はその場で解決する安心サポート</span>
+                    </div>
+                </div>
+
+                <!-- 強み3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-premium text-center flex flex-col justify-between hover:border-brand-gold hover:shadow-gold-glow transition-all duration-300">
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-amber-50/80 flex items-center justify-center mx-auto mb-4 text-brand-gold shadow-sm relative">
+                            <svg viewBox="0 0 100 100" class="w-10 h-10 text-brand-gold">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="4" />
+                                <path d="M35 50 L 45 60 L 65 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M50 15 L 50 85 M 15 50 L 85 50" stroke="#00b4d8" stroke-width="2" stroke-dasharray="2 4" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-brand-navy mb-2">初月からの収益化ルート</h4>
+                        <p class="text-[11px] text-brand-gold font-bold mb-3">まずは月1万円の喜びを体験</p>
+                        <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-left">
+                            ただ学ぶだけの座学ではありません。実際に簡単な作業で早く結果が出るジャンルに特化。お金を得る嬉しさをいち早く実感できます。
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-center space-x-1.5 text-[10px] text-slate-400">
+                        <i class="fa-solid fa-chart-line text-brand-gold"></i>
+                        <span>成果が出るから楽しく続けられる好循環</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 【Offer：提案】 -->
+    <section class="py-16 px-4 bg-white relative">
+        <div class="max-w-4xl mx-auto text-slate-900">
+            <span class="block text-center text-brand-orange font-extrabold text-sm tracking-wider uppercase mb-2">あなたにリスクはありません</span>
+            <h2 class="font-serif text-2xl md:text-4xl font-black text-center text-brand-navy mb-12 leading-snug">
+                新しい一歩を全力で応援する、<br>
+                今だけの「特別提案」と「豪華3大購入特典」
+            </h2>
+
+            <!-- 価格・オファーカード -->
+            <div class="bg-white rounded-3xl shadow-premium overflow-hidden border-2 border-brand-orange max-w-3xl mx-auto">
+                <div class="bg-brand-orange text-white text-center py-4 px-6">
+                    <p class="text-sm font-bold tracking-widest"><i class="fa-solid fa-bell mr-1 text-brand-yellow animate-bounce"></i> 期間限定・今だけの超特価！</p>
+                </div>
+                
+                <div class="p-6 md:p-10 text-center space-y-8">
+                    <!-- 価格表示 -->
+                    <div>
+                        <p class="text-slate-400 line-through text-base md:text-lg font-bold">通常価格：50,000円（税込）</p>
+                        <div class="flex items-center justify-center space-x-2 my-2">
+                            <span class="text-xs bg-red-500 text-white font-bold px-2.5 py-0.5 rounded-full">大幅割引</span>
+                            <i class="fa-solid fa-circle-down text-brand-orange text-xl"></i>
+                        </div>
+                        <div class="inline-block bg-amber-50 text-brand-orange font-black text-2xl md:text-4xl py-4 px-8 rounded-2xl border border-brand-orange/30">
+                            特別価格：<span class="text-red-600 text-4xl md:text-6xl font-black">9,800</span>円 <span class="text-xs md:text-sm text-slate-700 font-bold">（税込）</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">※これ以降の追加料金や、月額の費用などは一切発生いたしません。</p>
+                    </div>
+
+                    <hr class="border-slate-200">
+
+                    <!-- 豪華特典紹介 (アップロード画像と調和したサイバーグラデーションの美しい立体モックアップ) -->
+                    <div>
+                        <h4 class="font-bold text-lg text-brand-navy mb-6">
+                            <i class="fa-solid fa-gift text-brand-orange mr-1"></i> 今すぐ手に入る「3大購入特典（電子書籍/PDF）」
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                            
+                            <!-- 特典1：シアンネオン調和の3D本 -->
+                            <div class="bg-slate-50 p-4.5 rounded-2xl border border-slate-200/60 flex flex-col justify-between hover:border-brand-cyan hover:bg-white transition-all duration-300 shadow-sm">
+                                <div class="book-container flex justify-center mb-4">
+                                    <div class="book-mockup w-28 h-36 bg-gradient-to-r from-brand-navy to-brand-cyan rounded-r-md flex flex-col justify-between p-2.5 text-white relative">
+                                        <!-- 背表紙の装飾 -->
+                                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-navy rounded-l-sm"></div>
+                                        <div class="text-[8px] text-brand-yellow font-bold uppercase tracking-widest text-center">Special Vol.1</div>
+                                        
+                                        <!-- アップロード画像を模した回路風SVGデザイン -->
+                                        <svg viewBox="0 0 100 100" class="w-12 h-12 mx-auto text-brand-cyan/40">
+                                            <circle cx="50" cy="50" r="10" stroke="currentColor" stroke-width="2" fill="none" />
+                                            <line x1="50" y1="20" x2="50" y2="40" stroke="currentColor" stroke-width="2" />
+                                            <line x1="50" y1="60" x2="50" y2="80" stroke="currentColor" stroke-width="2" />
+                                            <line x1="20" y1="50" x2="40" y2="50" stroke="currentColor" stroke-width="2" />
+                                            <line x1="60" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="2" />
+                                        </svg>
+                                        
+                                        <div class="text-[9px] font-bold font-serif text-center leading-tight mt-1 text-slate-100">
+                                            60代専用<br>AI超入門<br>マニュアル
+                                        </div>
+                                        <div class="text-[6px] text-slate-300 text-right mt-auto">安心解説付き</div>
+                                    </div>
+                                </div>
+                                <span class="bg-brand-cyan text-white text-[10px] font-bold px-2 py-0.5 rounded-full block w-fit mb-2">特典 1</span>
+                                <h5 class="font-bold text-slate-900 text-xs md:text-sm mb-1">【PDF】60代専用AI超入門マニュアル</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">
+                                    難しいカタカナ用語を、日常生活に例えてわかりやすく解説した、初心者専用の優しい手引書。
+                                </p>
+                            </div>
+
+                            <!-- 特典2：サンセットオレンジ調和の3D本 -->
+                            <div class="bg-slate-50 p-4.5 rounded-2xl border border-slate-200/60 flex flex-col justify-between hover:border-brand-orange hover:bg-white transition-all duration-300 shadow-sm">
+                                <div class="book-container flex justify-center mb-4">
+                                    <div class="book-mockup w-28 h-36 bg-gradient-to-r from-brand-orange to-red-500 rounded-r-md flex flex-col justify-between p-2.5 text-white relative">
+                                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-orange-850 rounded-l-sm"></div>
+                                        <div class="text-[8px] text-brand-yellow font-bold uppercase tracking-widest text-center">Special Vol.2</div>
+                                        
+                                        <!-- AIグラフィック（ホログラム）を模したSVG -->
+                                        <svg viewBox="0 0 100 100" class="w-12 h-12 mx-auto text-amber-200/40">
+                                            <rect x="25" y="25" width="50" height="50" rx="4" stroke="currentColor" stroke-width="2" fill="none" />
+                                            <path d="M30 65 L 45 45 L 55 55 L 70 35" stroke="currentColor" stroke-width="2" fill="none" />
+                                        </svg>
+                                        
+                                        <div class="text-[9px] font-bold font-serif text-center leading-tight mt-1 text-slate-100">
+                                            コピペで使える<br>指示文<br>テンプレート集
+                                        </div>
+                                        <div class="text-[6px] text-slate-200 text-right mt-auto">すぐ使える</div>
+                                    </div>
+                                </div>
+                                <span class="bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded-full block w-fit mb-2">特典 2</span>
+                                <h5 class="font-bold text-slate-900 text-xs md:text-sm mb-1">【PDF】指示文テンプレート集</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">
+                                    スマートフォンの画面に「そのまま貼り付けるだけ」でAIが動く、魔法のテンプレート集。
+                                </p>
+                            </div>
+
+                            <!-- 特典3：ゴールド調和の3D本 -->
+                            <div class="bg-slate-50 p-4.5 rounded-2xl border border-slate-200/60 flex flex-col justify-between hover:border-brand-gold hover:bg-white transition-all duration-300 shadow-sm">
+                                <div class="book-container flex justify-center mb-4">
+                                    <div class="book-mockup w-28 h-36 bg-gradient-to-r from-brand-gold to-yellow-600 rounded-r-md flex flex-col justify-between p-2.5 text-brand-navy relative">
+                                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-amber-600 rounded-l-sm"></div>
+                                        <div class="text-[8px] text-slate-800 font-bold uppercase tracking-widest text-center">Special Vol.3</div>
+                                        
+                                        <!-- コイン・成功を示す星印のSVG -->
+                                        <svg viewBox="0 0 100 100" class="w-12 h-12 mx-auto text-slate-800/40">
+                                            <path d="M50 15 L 60 40 L 85 40 L 65 55 L 75 80 L 50 65 L 25 80 L 35 55 L 15 40 L 40 40 Z" stroke="currentColor" stroke-width="2" fill="none" />
+                                        </svg>
+                                        
+                                        <div class="text-[9px] font-bold font-serif text-center leading-tight mt-1 text-slate-900">
+                                            初月1万円<br>突破の最短<br>ロードマップ
+                                        </div>
+                                        <div class="text-[6px] text-slate-700 text-right mt-auto">徹底ガイド</div>
+                                    </div>
+                                </div>
+                                <span class="bg-brand-gold text-white text-[10px] font-bold px-2 py-0.5 rounded-full block w-fit mb-2">特典 3</span>
+                                <h5 class="font-bold text-slate-900 text-xs md:text-sm mb-1">【PDF】最速1万円突破ロードマップ</h5>
+                                <p class="text-[11px] text-slate-500 leading-relaxed">
+                                    今日から何を、どの順番で動かせば最初の収入を手にできるかが明確にわかる、迷子防止マップ。
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 【Narrowing down：絞り込み】 -->
+    <section class="py-12 px-4 bg-orange-50/60 text-slate-800 text-center relative overflow-hidden border-y border-orange-100">
+        <!-- AIファイバー線 -->
+        <div class="absolute top-0 left-0 right-0 cyber-line"></div>
+        
+        <div class="max-w-xl mx-auto">
+            <span class="block text-brand-orange font-extrabold text-sm tracking-wider uppercase mb-2">まもなく終了します！</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-brand-navy mb-6 leading-snug">
+                マンツーマンの丁寧なサポートを<br class="hidden sm:inline">
+                維持するため、<span class="text-brand-orange text-3xl">【先着30名様】</span>限定です
+            </h2>
+            <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-8">
+                大変ありがたいことに、現在お申し込みが殺到しております。お一人おひとりのお手元を丁寧に見守るサポート品質を維持するため、大変恐縮ですが人数に達し次第、予告なく通常価格（50,000円）に戻ります。あらかじめご了承ください。
+            </p>
+
+            <!-- カウントダウンタイマー (白地にシアンとオレンジのデジタル枠) -->
+            <div class="bg-white p-5 rounded-2xl border border-cyan-200 shadow-cyber-glow inline-block w-full max-w-sm">
+                <p class="text-xs text-slate-500 font-bold mb-3"><i class="fa-solid fa-clock mr-1 text-brand-cyan animate-pulse"></i> 特別割引キャンペーン終了まであと</p>
+                <div class="flex justify-center space-x-3 text-slate-900">
+                    <div class="bg-slate-50 p-3.5 rounded-xl min-w-[75px] shadow-sm border border-slate-100">
+                        <span id="hours" class="block font-black text-2xl text-brand-cyan">23</span>
+                        <span class="text-[9px] text-slate-500 block font-bold mt-1">時間</span>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl min-w-[75px] shadow-sm border border-slate-100">
+                        <span id="minutes" class="block font-black text-2xl text-brand-orange">59</span>
+                        <span class="text-[9px] text-slate-500 block font-bold mt-1">分</span>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded-xl min-w-[75px] shadow-sm border border-slate-100">
+                        <span id="seconds" class="block font-black text-2xl text-brand-cyan">59</span>
+                        <span class="text-[9px] text-slate-500 block font-bold mt-1">秒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 【Action：行動（CTA）】 -->
+    <section id="cta-form" class="py-16 px-4 bg-white relative">
+        <div class="max-w-xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-center text-brand-navy mb-2 leading-snug">
+                まずはお気軽に無料の個別相談から
+            </h2>
+            <p class="text-center text-xs md:text-sm text-slate-500 mb-8 leading-relaxed">
+                どのような不安でも結構です。下記のフォームに必要事項をご記入の上、送信してください。
+            </p>
+
+            <!-- 申し込みフォーム (シアンの柔らかいシャドウを持つクリーンなライトグレー背景) -->
+            <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="bg-slate-50/80 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-cyber-glow space-y-6">
+                <!-- お名前 -->
+                <div>
+                    <label for="name" class="block text-xs md:text-sm font-black text-slate-800 mb-2">
+                        お名前（フルネーム） <span class="bg-red-500 text-white text-[9px] px-2 py-0.5 rounded font-normal ml-2">必須</span>
+                    </label>
+                    <input type="text" id="name" required placeholder="例：山田 太郎" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-cyan text-slate-800 text-sm bg-white">
+                </div>
+
+                <!-- メールアドレス -->
+                <div>
+                    <label for="email" class="block text-xs md:text-sm font-black text-slate-800 mb-2">
+                        メールアドレス <span class="bg-red-500 text-white text-[9px] px-2 py-0.5 rounded font-normal ml-2">必須</span>
+                    </label>
+                    <input type="email" id="email" required placeholder="例：yamada@example.com" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-cyan text-slate-800 text-sm bg-white">
+                </div>
+
+                <!-- 年代 -->
+                <div>
+                    <label for="age" class="block text-xs md:text-sm font-black text-slate-800 mb-2">
+                        ご年代 <span class="bg-slate-500 text-white text-[9px] px-2 py-0.5 rounded font-normal ml-2">任意</span>
+                    </label>
+                    <select id="age" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-cyan text-slate-800 text-sm bg-white">
+                        <option value="">選択してください</option>
+                        <option value="60-64">60歳〜64歳</option>
+                        <option value="65-69" selected>65歳〜69歳（おすすめ）</option>
+                        <option value="70+">70歳以上</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <!-- 決済方法の希望 -->
+                <div>
+                    <label class="block text-xs md:text-sm font-black text-slate-800 mb-2">
+                        ご希望の決済方法 <span class="bg-red-500 text-white text-[9px] px-2 py-0.5 rounded font-normal ml-2">必須</span>
+                    </label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-2 border p-3 rounded-lg bg-white cursor-pointer hover:border-brand-orange transition-all">
+                            <input type="radio" name="payment" value="credit" checked class="text-brand-orange focus:ring-brand-orange">
+                            <span class="text-xs md:text-sm font-bold text-slate-700">クレジットカード</span>
+                        </label>
+                        <label class="flex items-center space-x-2 border p-3 rounded-lg bg-white cursor-pointer hover:border-brand-cyan transition-all">
+                            <input type="radio" name="payment" value="bank" class="text-brand-cyan focus:ring-brand-cyan">
+                            <span class="text-xs md:text-sm font-bold text-slate-700">銀行振込</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- プライバシーポリシー同意 -->
+                <div class="flex items-start space-x-2">
+                    <input type="checkbox" id="agree" required class="mt-1 text-brand-cyan focus:ring-brand-cyan rounded">
+                    <label for="agree" class="text-[11px] text-slate-600">
+                        個人情報の取り扱いおよび<span class="underline text-brand-cyan cursor-pointer">利用規約</span>に同意します。
+                    </label>
+                </div>
+
+                <!-- CTA送信ボタン -->
+                <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-white font-black text-lg md:text-xl py-4.5 rounded-xl shadow-orange-glow transition-all border-b-4 border-orange-800 flex items-center justify-center space-x-2">
+                    <span>申し込んで特典を受け取る</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </form>
+
+            <!-- メッセージボックス (完了時表示) -->
+            <div id="success-box" class="hidden mt-6 p-6 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl shadow-premium text-center">
+                <i class="fa-solid fa-circle-check text-3xl text-emerald-500 mb-2"></i>
+                <h3 class="font-bold text-lg mb-1">お申し込みを受け付けました！</h3>
+                <p class="text-sm">ご登録いただいたメールアドレス宛に、24時間以内に専門の担当相談員よりご連絡を差し上げます。また、お約束の「3大特典PDFマニュアル」もメールに添付してお送りしますので、ご確認ください。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 講師・添削アドバイザー紹介 -->
+    <section class="py-16 px-4 bg-slate-50 border-t border-slate-200/60 relative">
+        <div class="max-w-2xl mx-auto text-center">
+            <span class="text-xs bg-brand-accentBlue text-white px-3 py-1 rounded-full font-bold">私たちがサポートします</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-brand-navy mt-3 mb-8">
+                講師・アドバイザー紹介
+            </h2>
+
+            <!-- アップロードされたAIと調和する、親近感を持たせつつインテリジェンスを感じるプロフィールフレーム -->
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-premium border border-slate-200 flex flex-col items-center relative overflow-hidden">
+                <div class="absolute -top-12 -left-12 w-24 h-24 bg-brand-cyan/10 rounded-full blur-xl"></div>
+                
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-brand-cyan bg-slate-100 flex items-center justify-center shadow-md">
+                    <!-- 講師の知性を象徴するSVGポートレートイメージ -->
+                    <svg viewBox="0 0 100 100" class="w-16 h-16 text-brand-navy">
+                        <circle cx="50" cy="35" r="18" fill="none" stroke="currentColor" stroke-width="4" />
+                        <path d="M25 80 C 25 62, 75 62, 75 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+                        <!-- 知性を示すシアンの眼鏡フレーム -->
+                        <path d="M40 35 L 48 35 M 52 35 L 60 35" stroke="#00b4d8" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 mb-1">高橋 誠 (たかはし まこと)</h3>
+                <span class="text-xs text-brand-cyan font-bold mb-4">シニアAI副業専門アドバイザー</span>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-left">
+                    「かつては新しいデジタル機器に苦労した経験から、徹底した『シニア専門の目線』で、あのアップロード画像にあるような最先端AIを誰でもお茶の子さいさいで使いこなせる指導法を開発しました。お孫さんとのスマートフォンのやり取りのように、やさしくお教えするのがモットーです。」
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-serif text-2xl md:text-3xl font-black text-center text-brand-navy mb-8 leading-snug">
+                よくあるご質問（Q&A）
+            </h2>
+
+            <div class="space-y-4">
+                <!-- 質問1 -->
+                <div class="bg-slate-50/50 rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100 transition-all">
+                        <span class="text-sm md:text-base pr-3 text-brand-navy">Q1. 本当に1日30分だけで効果が期待できますか？</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400"></i>
+                    </button>
+                    <div id="faq-answer-1" class="hidden p-5 border-t border-slate-200 text-slate-600 text-xs md:text-sm bg-white leading-relaxed">
+                        はい、十分に可能なお時間です。忙しい日々のちょっとした合間にできるよう、ポイントを極限まで絞り、直感的で分かりやすい手順のみをマニュアル化して添削を行います。
+                    </div>
+                </div>
+
+                <!-- 質問2 -->
+                <div class="bg-slate-50/50 rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100 transition-all">
+                        <span class="text-sm md:text-base pr-3 text-brand-navy">Q2. パソコンのタイピングが遅くても問題ないですか？</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400"></i>
+                    </button>
+                    <div id="faq-answer-2" class="hidden p-5 border-t border-slate-200 text-slate-600 text-xs md:text-sm bg-white leading-relaxed">
+                        まったく問題ございません。AIへの指示は、普通に手紙やLINEを送るのと同じ平易な日本語で行います。また、コピーしてすぐに貼り付けられる便利な「テンプレート指示文」を多数お渡ししますので、文字入力の手間は最小限で済みます。
+                    </div>
+                </div>
+
+                <!-- 質問3 -->
+                <div class="bg-slate-50/50 rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-100 transition-all">
+                        <span class="text-sm md:text-base pr-3 text-brand-navy">Q3. 途中で操作方法が分からなくなったらどうすればいいですか？</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400"></i>
+                    </button>
+                    <div id="faq-answer-3" class="hidden p-5 border-t border-slate-200 text-slate-600 text-xs md:text-sm bg-white leading-relaxed">
+                        24時間、いつでも丁寧に対応できる問い合わせ質問窓口を完備しております。専門のカウンセラーが、つまづいたポイントを優しく分かりやすい言葉で個別にサポートいたしますので、挫折することなく進めていただけます。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-slate-50 text-slate-500 py-10 px-4 text-xs text-center border-t border-slate-200">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="flex flex-wrap justify-center gap-6 text-slate-600 font-medium mb-4">
+                <a href="#" class="hover:underline hover:text-brand-orange">特定商取引法に基づく表記</a>
+                <a href="#" class="hover:underline hover:text-brand-orange">プライバシーポリシー</a>
+                <a href="#" class="hover:underline hover:text-brand-orange">利用規約</a>
+                <a href="#" class="hover:underline hover:text-brand-orange">運営組織情報</a>
+            </div>
+            <p>※本プログラムの効果には個人差があり、特定の成果や収入を確定的に保証するものではございません。</p>
+            <p>&copy; 2026 AIツール副業個別相談事務局 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScriptの制御 -->
+    <script>
+        // ページロード時の初期設定
+        window.onload = function() {
+            startCountdown();
+        };
+
+        // 1. カウントダウンタイマーの実装
+        function startCountdown() {
+            let hours = 23;
+            let minutes = 59;
+            let seconds = 59;
+
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            const timer = setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            // デモ維持のためリピート
+                            hours = 23;
+                            minutes = 59;
+                            seconds = 59;
+                        }
+                    }
+                }
+
+                // 表示の更新 (2桁表示にパディング)
+                if(hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                if(minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+                if(secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+
+        // 2. よくある質問のアコーディオン制御
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // 3. お申し込みフォームの処理 (疑似送信処理)
+        function handleFormSubmit(event) {
+            event.preventDefault(); // デフォルトの送信挙動を防止
+
+            const form = document.getElementById('consultation-form');
+            const successBox = document.getElementById('success-box');
+
+            // フォームを非表示にし、成功画面を表示
+            form.classList.add('hidden');
+            successBox.classList.remove('hidden');
+
+            // 成功メッセージまでスムーズスクロール
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
+
